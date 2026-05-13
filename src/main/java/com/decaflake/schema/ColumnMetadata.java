@@ -1,0 +1,20 @@
+package com.decaflake.schema;
+
+public class ColumnMetadata {
+
+    private String name;
+    private String type;
+
+    public ColumnMetadata(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+}
