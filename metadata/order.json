@@ -1,0 +1,17 @@
+{
+  "tableName": "PURCHASE",
+  "columns": [
+    {
+      "name": "ID",
+      "type": "INT"
+    },
+    {
+      "name": "TOTAL",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "CLIENT",
+      "type": "STRING"
+    }
+  ]
+}

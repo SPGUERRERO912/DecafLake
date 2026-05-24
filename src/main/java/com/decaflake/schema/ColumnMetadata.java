@@ -5,6 +5,9 @@ public class ColumnMetadata {
     private String name;
     private String type;
 
+    public ColumnMetadata() {
+    }
+
     public ColumnMetadata(String name, String type) {
         this.name = name;
         this.type = type;

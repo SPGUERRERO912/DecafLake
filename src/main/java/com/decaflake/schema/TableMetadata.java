@@ -7,6 +7,9 @@ public class TableMetadata {
     private String tableName;
     private List<ColumnMetadata> columns;
 
+    public TableMetadata() {
+    }
+
     public TableMetadata(String tableName, List<ColumnMetadata> columns) {
         this.tableName = tableName;
         this.columns = columns;

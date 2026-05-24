@@ -1,0 +1,17 @@
+{
+  "tableName": "CLIENT",
+  "columns": [
+    {
+      "name": "ID",
+      "type": "INT"
+    },
+    {
+      "name": "NAME",
+      "type": "STRING"
+    },
+    {
+      "name": "DATE_BIRTH",
+      "type": "STRING"
+    }
+  ]
+}

@@ -1,32 +1,24 @@
 package com.decaflake.cli;
 
 import com.decaflake.parser.QueryParser;
-import com.decaflake.schema.ColumnMetadata;
 import com.decaflake.schema.SchemaRegistry;
-import com.decaflake.schema.TableMetadata;
+import com.decaflake.schema.loader.MetadataLoader;
 import com.decaflake.validator.QueryValidator;
 import org.apache.calcite.sql.SqlNode;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class QueryCLI {
 
-    public void start() {
+    public void start() throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         SchemaRegistry schemaRegistry = new SchemaRegistry();
 
-        // tabla mock en memoria
-        schemaRegistry.registerTable(
-                new TableMetadata(
-                        "Orden",
-                        List.of(
-                                new ColumnMetadata("id", "INT"),
-                                new ColumnMetadata("total", "DOUBLE")
-                        )
-                )
-        );
+        //load data from metadata
+
+        MetadataLoader loader = new MetadataLoader();
+        loader.loadSchemas(schemaRegistry);
 
         QueryParser parser = new QueryParser();
         QueryValidator validator = new QueryValidator(schemaRegistry);
