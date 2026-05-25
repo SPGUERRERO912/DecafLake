@@ -1,5 +1,6 @@
 package com.decaflake.cli;
 
+import com.decaflake.executor.InsertExecutor;
 import com.decaflake.parser.QueryParser;
 import com.decaflake.schema.SchemaRegistry;
 import com.decaflake.schema.loader.MetadataLoader;
@@ -41,6 +42,11 @@ public class QueryCLI {
 
                 System.out.println("Query is valid!");
                 System.out.println(sqlNode);
+
+                InsertExecutor insertExecutor =
+                        new InsertExecutor();
+
+                insertExecutor.execute(sqlNode);
 
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());

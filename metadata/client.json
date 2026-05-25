@@ -8,10 +8,6 @@
     {
       "name": "NAME",
       "type": "STRING"
-    },
-    {
-      "name": "DATE_BIRTH",
-      "type": "STRING"
     }
   ]
 }
